@@ -14,11 +14,11 @@ func CalcSquare(SideLen float64, SidesNum chislo) float64 {
 	var S float64
 
 	if SidesNum == SidesTriangle {
-		S = ((SideLen * SideLen) * Sqrt(3)) / 4
+		S = ((SideLen * SideLen) * math.Sqrt(3)) / 4
 	} else if SidesNum == SidesSquare {
-		S = SideLen * SideLen
+		S = math.Pow(SideLen, 2)
 	} else if SidesNum == SidesCircle {
-		S = math.Pi * (SideLen * SideLen)
+		S = math.Pi * math.Pow(SideLen, 2)
 	}
 	return S
 }
